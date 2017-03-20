@@ -137,7 +137,7 @@ class Postfix
 
     private static int priority(char value)
 	{
-		return value == '*' || value == '/' ? 2 : value == '+' || value == '-' ? 1 : 0 ;
+		return value == ')' ? 3 : value == '*' || value == '/' ? 2 : value == '+' || value == '-' || value == '(' ? 1 : 0 ;
 	}
 
 }
