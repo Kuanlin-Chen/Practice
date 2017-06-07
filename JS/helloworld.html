@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript</title>
+
+        <script>
+            function sayHello(who){
+                document.write("<br>Hello! " + who);
+            }
+            function calculate(a, b){
+                return a+b;
+            }
+        </script>
+    </head>
+    <body>
+        <!--referring to an external script-->
+        <!--<script src="demo.js">-->
+        <script>
+            //The write() function is actually a method of the Document object.
+            document.write("Hello, World!");
+            var word = "\nMy name";
+            var name = " is KuanlinChen<br/>";
+            var sentence = word + name;
+            document.write(sentence);
+            var num1 = 5;
+            var num2 = 3;
+            var total = calculate(5, 3);
+            document.write("\r"+total);
+            var alpha = "ASDFGHJ";
+            var result = alpha.substring(1, 6);
+            document.write("<br>"+result);
+            var a = new Array(5);
+            a[0] = "cat";
+            a[1] = "dog";
+            a[2] = 95;
+            a[4] = true;
+            document.write("<br>"+a[0]+a[2]+a[4]);
+            sayHello("Ken");
+            sayHello("George");
+            if(num1 > 1){
+                alert("num1="+num1);
+            }
+            else{
+                alert("There is something wrong!");
+            }
+            var input = prompt("Please enter your name");
+            document.write("<br>"+input);
+            var result = confirm("Do you really want to leave this page?");
+            if(result){
+                alert("yes");
+            }else{
+                alert("no");
+            }
+            var person = {name:"John", age:42, color:"green"};
+            document.write("<br>"+person.name+"\n"+person.color+"<br/>");
+            //Array
+            //var courses = new Array("HTML","Java","Javascript","C++");
+            //same as below
+            var courses = ["HTML","Java","Javascript","C++"]; //recommended
+            for(i=0;i<courses.length;i++){
+                document.write(courses[i]+"\n");
+            }
+            document.write(courses[10]+"<br/>"); //output "undefined"
+            var number = prompt("Please enter number");
+            var squareroot = Math.sqrt(number);
+            alert(number+"'s square root is:"+squareroot);
+        </script>
+    </body>
+</html>

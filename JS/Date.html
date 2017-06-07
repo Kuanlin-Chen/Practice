@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	    <title>Date</title>
+	    <script>
+	        function myAlert(){
+	    	    alert("I love you!")
+	        }
+            function printTime(){
+                var date = new Date();
+                var hour = date.getHours();
+                var minute = date.getMinutes();
+                var second = date.getSeconds();
+                document.body.innerHTML = hour+":"+minute+":"+second;
+            }
+	    </script>
+    </head>
+    <body>
+    	<script>
+    	    //setInterval(myAlert,3000);
+            setInterval(printTime,1000);
+    	</script>
+    </body>
+</html>

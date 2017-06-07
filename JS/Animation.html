@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    	<title>Animation</title>
+        <script>
+            function saygoodbye(){
+                alert("See you soon!");
+            }
+        </script>
+    </head>
+    <body onload="saygoodbye()">
+    	<style>
+    	    #container{
+    	    	width: 200px;
+    	    	height: 200px;
+    	    	background: green;
+    	    	position: relative;
+    	    }
+    	    #box{
+    	    	width: 50px;
+    	    	height: 50px;
+    	    	background: red;
+    	    	position: absolute;
+    	    }
+    	</style>
+    	<div id="container">
+    		<div id="box"></div>
+    	</div>
+    	<script>
+    	    //starting position
+    	    var pos = 0;
+    	    var box = document.getElementById("box");
+    	    
+    	    function move(){
+    	    	if(pos>=150){
+    	    		clearInterval(t); //stop a interval timer
+    	    	}else{
+    	    		pos += 1;
+    	    	    box.style.left = pos+"px";
+    	    	}
+    	    }
+            function start(){
+                setInterval(move,500);
+            }
+            function show(){
+                alert("Hi!");
+            }
+    	</script>
+        <button onclick="start()">click here</button>
+        <button onclick="show()">show</button>
+        <button id="demo">demo</button>
+        <script>
+            var btn = document.getElementById("demo");
+            btn.addEventListener("click",myFunction);
+
+            function myFunction(){
+                alert(Math.random());
+                //this button will show the random number only one time.
+                btn.removeEventListener("click",myFunction);
+            }
+        </script>
+    </body>
+</html>
